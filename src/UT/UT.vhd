@@ -17,14 +17,15 @@ Port (
     rst : in std_logic;
     
     -- UC
-    Load_Accu  : out std_logic;
-    Sig_ctrl   : out std_logic;
-    Carry      : in  std_logic;
-    Load_Carry : out std_logic;
-    Load_data  : out std_logic;
+    Load_Accu  : in  std_logic;
+    Sig_ctrl   : in  std_logic;
+    Carry      : out std_logic;
+    Load_Carry : in  std_logic;
+    Load_data  : in  std_logic;
+    Init_Carry : in  std_logic;
     
     -- RAM
-    out_ram : in  std_logic_vector(7 DOWNTO 0)
+    out_ram : in  std_logic_vector(7 DOWNTO 0);
     in_ram  : out std_logic_vector(7 DOWNTO 0)
 );    
     
@@ -65,6 +66,7 @@ architecture Behavioral of UT is
         val_in  : in  std_logic;
         val_out : out std_logic;
 
+        init    : in  std_logic;
         load    : in  std_logic;
 
         clk     : in  std_logic;
@@ -102,6 +104,7 @@ begin
         val_in  <= ALU_C,
         val_out <= Carry,
 
+        init    <= Init_Carry,
         load    <= Load_Carry,
 
         clk     <= clk,
