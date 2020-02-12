@@ -104,14 +104,14 @@ begin
         F_in => dat_bus(8 downto 7)
     );
 
-    PC: REG_8 port map (
+    PC: PC port map (
         clk   => clk,
         ce    => PC_en,
         rst   => PC_rst,
         load  => PC_load,
 
-        R_in(5 downto 0)  => dat_bus(5 downto 0),
-        R_out(5 downto 0) => PC_MUX
+        PC_in(5 downto 0)  => dat_bus(5 downto 0),
+        PC_out(5 downto 0) => PC_MUX
         
     );
 
