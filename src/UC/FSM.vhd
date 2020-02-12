@@ -29,7 +29,7 @@ ENTITY FSM IS
         Carry      : in  std_logic; --13
 
         --UC
-        
+
         Reg_load   : out std_logic; --8
         Mux_sel    : out std_logic; --9
         PC_load    : out std_logic; --10

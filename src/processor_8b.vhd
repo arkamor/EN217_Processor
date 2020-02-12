@@ -31,6 +31,7 @@ architecture Behavioral of processor_8b is
 
     component UT
     PORT ( 
+
         clk : in std_logic;
         ce  : in std_logic;
         rst : in std_logic;
@@ -56,7 +57,12 @@ architecture Behavioral of processor_8b is
         rst : in std_logic;
         
         -- UT
-        UT_com : out std_logic_vector(3 downto 0);
+        Load_Accu  : out std_logic;
+        Sig_ctrl   : out std_logic;
+        Carry      : in  std_logic;
+        Load_Carry : out std_logic;
+        Load_data  : out std_logic;
+        Init_Carry : out std_logic;
         
         -- RAM
         RAM_com : out std_logic_vector(1 downto 0);
@@ -68,8 +74,15 @@ architecture Behavioral of processor_8b is
 
     component UM
     PORT ( 
-        clk      : in  STD_LOGIC;
-        rst      : in  STD_LOGIC
+		clk		 : IN  STD_LOGIC;
+		ce       : IN  STD_LOGIC;
+		
+		rw       : IN  STD_LOGIC;
+		enable   : IN  STD_LOGIC;
+
+		addr	 : IN  STD_LOGIC_VECTOR(6 DOWNTO 0);
+		data_in	 : IN  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		data_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
     );
     end component;
 

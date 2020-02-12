@@ -17,7 +17,12 @@ Port (
     rst : in std_logic;
     
     -- UT
-    UT_com : out std_logic_vector(3 downto 0);
+    Load_Accu  : out std_logic;
+    Sig_ctrl   : out std_logic;
+    Carry      : in  std_logic;
+    Load_Carry : out std_logic;
+    Load_data  : out std_logic;
+    Init_Carry : out std_logic;
     
     -- RAM
     RAM_com : out std_logic_vector(1 downto 0);
@@ -37,12 +42,34 @@ architecture Behavioral of UC is
 
     component FSM
     PORT ( 
-        F_out : out std_logic_vector(11 downto 0);
-        F_in  : in  std_logic_vector(1 downto 0);
 
-        clk   : in  std_logic;
-        ce    : in  std_logic;
-        rst   : in  std_logic
+        clk : in std_logic;
+        ce  : in std_logic;
+        rst : in std_logic;
+
+        OP  : in std_logic_vector(1 downto 0);
+
+        --UT
+
+        Load_Accu  : out std_logic; --1
+        Sig_ctrl   : out std_logic; --2
+        Init_Carry : out std_logic; --3
+        Load_Carry : out std_logic; --4
+        Load_data  : out std_logic; --5
+        Carry      : in  std_logic; --13
+
+        --UC
+        
+        Reg_load   : out std_logic; --8
+        Mux_sel    : out std_logic; --9
+        PC_load    : out std_logic; --10
+        PC_en      : out std_logic; --11
+        PC_rst     : out std_logic; --12
+
+        --RAM
+
+        RAM_RW     : out std_logic; --7
+        RAM_EN     : out std_logic --6
     );
     end component;
 
@@ -82,6 +109,16 @@ architecture Behavioral of UC is
     signal PC_rst   : std_logic;
     signal Mux_sel  : std_logic;
 
+    signal Load_Accu  : std_logic;
+    signal Sig_ctrl   : std_logic;
+    signal Init_Carry : std_logic;
+    signal Load_Carry : std_logic;
+    signal Load_data  : std_logic;
+    signal Carry      : std_logic;
+
+    signal RAM_RW     : std_logic;
+    signal RAM_EN     : std_logic;
+
 begin
 
     ------------------------------
@@ -89,19 +126,30 @@ begin
     ------------------------------
 
     my_FSM: FSM port map (
+
         clk => clk,
         ce  => ce,
         rst => rst,
 
-        F_out(4 downto 0)  => UT_com,
-        F_out(6 downto 5)  => RAM_com,
-        F_out(7)  => Reg_load,
-        F_out(8)  => PC_load,
-        F_out(9)  => PC_en,
-        F_out(10) => PC_rst,
-        F_out(11) => Mux_sel,
+        OP <= dat_bus(8 downto 7),
 
-        F_in => dat_bus(8 downto 7)
+        Load_Accu  <= Load_Accu,
+        Sig_ctrl   <= Sig_ctrl,
+        Init_Carry <= Init_Carry,
+        Load_Carry <= Load_Carry,
+        Load_data  <= Load_data,
+
+        Carry <= Carry,
+                
+        Reg_load <= Reg_load,
+        Mux_sel  <= Reg_load,
+        PC_load  <= Reg_load,
+        PC_en    <= Reg_load,
+        PC_rst   <= Reg_load,
+
+        RAM_RW <= RAM_RW,
+        RAM_EN <= RAM_EN
+        
     );
 
     PC: PC port map (
