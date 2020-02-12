@@ -7,9 +7,11 @@ entity PC is
         ce   : in STD_LOGIC;
         clk  : in STD_LOGIC;
         rst  : in STD_LOGIC;
-        load : in STD_LOGIC;
 
-        PC_in  : in  STD_LOGIC_VECTOR (5 DOWNTO 0));
+        load : in STD_LOGIC;
+        load : in STD_LOGIC;
+        
+        PC_in  : in  STD_LOGIC_VECTOR (5 DOWNTO 0);
         PC_out : out STD_LOGIC_VECTOR (5 DOWNTO 0)
     );
 end PC;
@@ -23,11 +25,15 @@ begin
     begin
         IF (rst = '1') THEN
             count <= "000000";
-        ELSIF (load = '1') THEN
-            count <= unsigned(PC_in);
         ELSIF (clk'event AND clk = '1') THEN
             IF (CE = '1') THEN
-                count <= count + 1;
+                IF (init = '1') THEN
+                    count <= "000000";
+                ELSIF (load = '1') THEN
+                    count <= unsigned(PC_in);
+                ELSIF (enable = '1') THEN
+                    count <= count + 1;
+                END IF;
             END IF;
         END IF;
         

@@ -17,7 +17,7 @@ Port (
     rst : in std_logic;
     
     -- UT
-    UT_com : out std_logic_vector(4 downto 0);
+    UT_com : out std_logic_vector(3 downto 0);
     
     -- RAM
     RAM_com : out std_logic_vector(1 downto 0);

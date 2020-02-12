@@ -16,17 +16,18 @@ Port (
     ce  : in std_logic;
     rst : in std_logic;
     
-    -- UT
-    UT_com : out std_logic_vector(4 downto 0);
+    -- UC
+    Load_Accu  : out std_logic;
+    Sig_ctrl   : out std_logic;
+    Carry      : in  std_logic;
+    Load_Carry : out std_logic;
+    Load_data  : out std_logic;
     
     -- RAM
-    RAM_com : out std_logic_vector(1 downto 0);
+    out_ram : in  std_logic_vector(7 DOWNTO 0)
+    in_ram  : out std_logic_vector(7 DOWNTO 0)
+);    
     
-    addr_ram : in  std_logic_vector(5 DOWNTO 0);
-    data_ram : out std_logic_vector(7 DOWNTO 0)
-        
-);
-            
 end UT;
 
 architecture Behavioral of UT is
@@ -35,14 +36,14 @@ architecture Behavioral of UT is
     -- Components declaration --
     ----------------------------
 
-    component FSM
+    component ALU
     PORT ( 
-        F_out : out std_logic_vector(11 downto 0);
-        F_in  : in  std_logic_vector(1 downto 0);
-
-        clk   : in  std_logic;
-        ce    : in  std_logic;
-        rst   : in  std_logic
+        Sig_ctrl : in  std_logic;
+        Carry    : out std_logic;
+        
+        Reg_data : in  std_logic_vector(7 downto 0);
+        Reg_accu : in  std_logic_vector(7 downto 0);
+        Alu_out  : out std_logic_vector(7 downto 0)
     );
     end component;
 
@@ -59,13 +60,16 @@ architecture Behavioral of UT is
     );
     end component;
 
-    component MUX_6
+    component carry
     PORT (
-        M_in_a : in  std_logic_vector(5 downto 0);
-        M_in_b : in  std_logic_vector(5 downto 0);
-        M_out  : out std_logic_vector(5 downto 0);
+        val_in  : in  std_logic;
+        val_out : out std_logic;
 
-        sel   : in  std_logic
+        load    : in  std_logic;
+
+        clk     : in  std_logic;
+        ce      : in  std_logic;
+        rst     : in  std_logic
     );
     end component;
 
@@ -73,14 +77,11 @@ architecture Behavioral of UT is
     -- Internals signals declaration --
     -----------------------------------
 
-    signal PC_MUX  : std_logic_vector(5 downto 0) := (others=>'0');
-    signal dat_bus : std_logic_vector(7 downto 0) := (others=>'0');
+    signal ALU_A : std_logic_vector(7 downto 0) := (others=>'0');
+    signal ALU_B : std_logic_vector(7 downto 0) := (others=>'0');
+    signal ALU_O : std_logic_vector(7 downto 0) := (others=>'0');
     
-    signal Reg_load : std_logic;
-    signal PC_load  : std_logic;
-    signal PC_en    : std_logic;
-    signal PC_rst   : std_logic;
-    signal Mux_sel  : std_logic;
+    signal ALU_C  : std_logic;
 
 begin
 
@@ -88,50 +89,44 @@ begin
     -- Instantiate and port map --
     ------------------------------
 
-    my_FSM: FSM port map (
-        clk => clk,
-        ce  => ce,
-        rst => rst,
-
-        F_out(4 downto 0)  => UT_com,
-        F_out(6 downto 5)  => RAM_com,
-        F_out(7)  => Reg_load,
-        F_out(8)  => PC_load,
-        F_out(9)  => PC_en,
-        F_out(10) => PC_rst,
-        F_out(11) => Mux_sel,
-
-        F_in => dat_bus(8 downto 7)
-    );
-
-    PC: PC port map (
-        clk   => clk,
-        ce    => PC_en,
-        rst   => PC_rst,
-        load  => PC_load,
-
-        PC_in(5 downto 0)  => dat_bus(5 downto 0),
-        PC_out(5 downto 0) => PC_MUX
+    my_ALU: ALU port map (
+        Sig_ctrl <= Sig_ctrl,
+        Carry    <= ALU_C,
         
+        Reg_data <= ALU_A,
+        Reg_accu <= ALU_B,
+        Alu_out  <= ALU_O
     );
 
-    Reg_ins: REG_8 port map (
-        clk   => clk,
-        ce    => ce,
-        rst   => rst,
-        load  => Reg_load,
+    my_carry: carry port map (
+        val_in  <= ALU_C,
+        val_out <= Carry,
 
-        R_in  => data_ram,
-        R_out => dat_bus
+        load    <= Load_Carry,
 
+        clk     <= clk,
+        ce      <= ce,
+        rst     <= rst
     );
 
-    mux: MUX_6 port map (
-        M_in_a => dat_bus(5 downto 0),
-        M_in_b => PC_MUX,
-        M_out  => addr_ram,
+    reg_data: REG_8 port map ( 
+        R_in  <= out_ram,
+        R_out <= ALU_A,
+        
+        load  <= Sig_ctrl,
 
-        sel    => Mux_sel
+        clk   <= Sig_ctrl,
+        ce    <= Sig_ctrl,
+        rst   <= Sig_ctrl
+    );
+
+    reg_accu: REG_8 port map (
+        Sig_ctrl <= Sig_ctrl,
+        Carry    <= ALU_C,
+        
+        Reg_data <= ALU_A,
+        Reg_accu <= ALU_B,
+        Alu_out  <= ALU_O
     );
 
     ----------------------
