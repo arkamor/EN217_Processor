@@ -8,6 +8,7 @@ entity REG_8 is
 
         load    : in STD_LOGIC;
         clk     : in STD_LOGIC;
+        ce      : in STD_LOGIC;
         rst     : in STD_LOGIC;
 
         val_out : out STD_LOGIC_VECTOR (7 downto 0)
@@ -23,11 +24,13 @@ begin
 process (clk, rst) is
 begin
 
-    IF (clk = '1' AND clk'event) THEN
-        IF(rst = '0') THEN
-            reg <= "00000000";
-        ELSIF (load = '1') THEN
-            reg <= val_in;
+    IF (rst = '1') THEN
+        reg <= "00000000";
+    ELSIF( clk = '1' AND clk'event) THEN
+        IF ( ce = '1') THEN
+            IF (load = '1') THEN
+                reg <= val_in;
+            END IF;
         END IF;
     END IF;
 
