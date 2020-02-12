@@ -1,6 +1,6 @@
 ---------------------------------------------------------
 -- VHDL top level for 8 bits processor's UC				  
--- by Martin AUCHER, 02/2020
+-- by Martin AUCHER & Kevin PEREZ, 02/2020
 --
 -- Code used for 8 bits processor courses at ENSEIRB-MATMECA
 ---------------------------------------------------------
