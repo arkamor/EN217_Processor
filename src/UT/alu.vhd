@@ -18,16 +18,18 @@ begin
    alu : process(Sig_ctrl, Reg_data, Reg_accu)
    begin
 
-      if(Sig_ctrl == '1') then
+      if(Sig_ctrl == '0') then
          -- NOR
-         Reg_accu <= Reg_accu NOR Reg_data;
+         reg(7 downto 0) <= Reg_accu NOR Reg_data;
+         reg(8) <= '0';
       else then
          -- ADD
-         reg <= Reg_accu + Reg_data;
-         carry <= reg(8);
-         Reg_accu <= reg(7 downto 0);
+         reg <= std_logic_vector(resize(unsigned(Reg_data), 9) + resize(unsigned(Reg_accu), 9));
       end if;
 
    end process alu;
+
+   Reg_accu <= reg(7 downto 0);
+   carry <= reg(8);
 
 end Behavioral;

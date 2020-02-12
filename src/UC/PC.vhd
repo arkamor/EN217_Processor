@@ -9,7 +9,7 @@ entity PC is
         rst  : in STD_LOGIC;
 
         load : in STD_LOGIC;
-        load : in STD_LOGIC;
+        enable : in STD_LOGIC;
         
         PC_in  : in  STD_LOGIC_VECTOR (5 DOWNTO 0);
         PC_out : out STD_LOGIC_VECTOR (5 DOWNTO 0)
