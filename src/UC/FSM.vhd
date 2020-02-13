@@ -62,53 +62,53 @@ begin
     END PROCESS;
 
 
-    PROCESS(current_state) IS
+    PROCESS(current_state, OP) IS
     BEGIN
         case current_state IS
 
             when init =>
-                next_state => fetch_instruction;
+                next_state <= fetch_instruction;
 
             when fetch_instruction =>
-                next_state => decode;
+                next_state <= decode;
             
             when decode =>
 
                 case OP is
                     when "11" =>
-                        next_state => s_JCC;
+                        next_state <= s_JCC;
                     when "10" =>
-                        next_state => s_STA;
+                        next_state <= s_STA;
                     when others =>
-                        next_state => fetch_operand;
+                        next_state <= fetch_operand;
                 end case;
             
             when fetch_operand =>
 
                 if(OP(0) = '0') then
-                    next_state => s_NOR;
+                    next_state <= s_NOR;
                 else
-                    next_state => s_ADD;
+                    next_state <= s_ADD;
                 end if;
         
             --when s_NOR =>
-            --    next_state => fetch_instruction;
+            --    next_state <= fetch_instruction;
             
             --when s_ADD =>
-            --    next_state => fetch_instruction;
+            --    next_state <= fetch_instruction;
             
             --when s_JCC =>
-            --    next_state => fetch_instruction;
+            --    next_state <= fetch_instruction;
             
             --when s_STA =>
-            --    next_state => fetch_instruction;
+            --    next_state <= fetch_instruction;
                 
-            when others => fetch_instruction;
+            when others => next_state <= fetch_instruction;
 
         end case;
 end PROCESS;
 
-PROCESS (current_state) IS
+PROCESS (current_state, Carry) IS
     BEGIN  -- PROCESS
     CASE current_state IS
         when init =>

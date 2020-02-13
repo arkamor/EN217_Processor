@@ -90,8 +90,29 @@ architecture Behavioral of processor_8b is
     -- Internals signals declaration --
     -----------------------------------
 
-    SIGNAL mem_a : std_logic_vector(7 downto 0) := (others=>'0'); 
+    SIGNAL mem_a : std_logic_vector(5 downto 0) := (others=>'0'); 
     SIGNAL mem_d : std_logic_vector(7 downto 0) := (others=>'0');
+
+    -- UC/UT --
+    
+    SIGNAL Load_Accu  : std_logic;
+    SIGNAL Sig_ctrl   : std_logic;
+    SIGNAL Carry      : std_logic;
+    SIGNAL Load_Carry : std_logic;
+    SIGNAL Load_data  : std_logic;
+    SIGNAL Init_Carry : std_logic;
+    
+    -- RAM
+
+    ---- UC ----    
+    -- RAM
+    RAM_com : out std_logic_vector(1 downto 0);
+    
+
+    ---- UM ----
+    rw       : IN  STD_LOGIC;
+    enable   : IN  STD_LOGIC;
+
 
 begin
 

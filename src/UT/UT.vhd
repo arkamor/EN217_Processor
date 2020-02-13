@@ -19,7 +19,7 @@ Port (
     -- UC
     Load_Accu  : in  std_logic;
     Sig_ctrl   : in  std_logic;
-    Carry      : out std_logic;
+    o_Carry    : out std_logic;
     Load_Carry : in  std_logic;
     Load_data  : in  std_logic;
     Init_Carry : in  std_logic;
@@ -61,7 +61,7 @@ architecture Behavioral of UT is
     );
     end component;
 
-    component carry
+    component CARRY
     PORT (
         val_in  : in  std_logic;
         val_out : out std_logic;
@@ -92,67 +92,45 @@ begin
     ------------------------------
 
     my_ALU: ALU port map (
-        Sig_ctrl <= Sig_ctrl,
-        Carry    <= ALU_C,
+        Sig_ctrl => Sig_ctrl,
+        Carry    => ALU_C,
         
-        Reg_data <= ALU_A,
-        Reg_accu <= ALU_B,
-        Alu_out  <= ALU_O
+        Reg_data => ALU_A,
+        Reg_accu => ALU_B,
+        Alu_out  => ALU_O
     );
 
-    my_carry: carry port map (
-        val_in  <= ALU_C,
-        val_out <= Carry,
+    my_carry: CARRY port map (
+        val_in  => ALU_C,
+        val_out => o_Carry,
 
-        init    <= Init_Carry,
-        load    <= Load_Carry,
+        init    => Init_Carry,
+        load    => Load_Carry,
 
-        clk     <= clk,
-        ce      <= ce,
-        rst     <= rst
+        clk     => clk,
+        ce      => ce,
+        rst     => rst
     );
 
     reg_data: REG_8 port map ( 
-        R_in  <= out_ram,
-        R_out <= ALU_A,
+        R_in  => out_ram,
+        R_out => ALU_A,
         
-        load  <= Sig_ctrl,
+        load  => Sig_ctrl,
 
-        clk   <= Sig_ctrl,
-        ce    <= Sig_ctrl,
-        rst   <= Sig_ctrl
+        clk   => Sig_ctrl,
+        ce    => Sig_ctrl,
+        rst   => Sig_ctrl
     );
 
     reg_accu: REG_8 port map (
-        Sig_ctrl <= Sig_ctrl,
-        Carry    <= ALU_C,
+        Sig_ctrl => Sig_ctrl,
+        Carry    => ALU_C,
         
-        Reg_data <= ALU_A,
-        Reg_accu <= ALU_B,
-        Alu_out  <= ALU_O
+        Reg_data => ALU_A,
+        Reg_accu => ALU_B,
+        Alu_out  => ALU_O
     );
-
-    ----------------------
-    -- Synchronous code --
-    ----------------------
-
-    -- process (clk, rst) is
-    -- begin --process
-    --     if (clk'event and clk='1') then
-    --         if rst ='1' then
-    --             mem_a  <= (others=>'0');
-    --         end if;
-
-
-    --     end if;
-    -- end process
-
-    -----------------------
-    -- Asynchronous code --
-    -----------------------
-    
-    -- M_addr <= mem_a;
-    -- M_data <= mem_d;
 
 end Behavioral;
 

@@ -96,6 +96,20 @@ architecture Behavioral of UC is
     );
     end component;
 
+    component PC
+    Port ( 
+        ce   : in STD_LOGIC;
+        clk  : in STD_LOGIC;
+        rst  : in STD_LOGIC;
+
+        load : in STD_LOGIC;
+        enable : in STD_LOGIC;
+        
+        PC_in  : in  STD_LOGIC_VECTOR (5 DOWNTO 0);
+        PC_out : out STD_LOGIC_VECTOR (5 DOWNTO 0)
+    );
+    end component;
+
     -----------------------------------
     -- Internals signals declaration --
     -----------------------------------
