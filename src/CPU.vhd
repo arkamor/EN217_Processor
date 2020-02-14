@@ -83,7 +83,7 @@ architecture Behavioral of CPU is
 		rw       : IN  STD_LOGIC;
 		enable   : IN  STD_LOGIC;
 
-		addr	 : IN  STD_LOGIC_VECTOR(6 DOWNTO 0);
+		addr	 : IN  STD_LOGIC_VECTOR(5 DOWNTO 0);
 		data_in	 : IN  STD_LOGIC_VECTOR(7 DOWNTO 0);
 		data_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
     );
@@ -140,36 +140,36 @@ begin
         RAM_EN     => RAM_EN,
         RAM_RW     => RAM_RW,
 
-        addr_ram     => addr_ram,
-        data_ram     => data_ram
+        addr_ram     => mem_a,
+        data_ram     => mem_d_0
     );
 
-    my_UT: UC port map (
+    my_UT: UT port map (
         clk      => clk,
         rst      => rst,
         ce       => ce,
         
         Load_Accu    => Load_Accu,
         Sig_ctrl     => Sig_ctrl,
-        Carry     => Carry,
+        o_Carry     => Carry,
         Load_Carry     => Load_Carry,
         Load_data     => Load_data,
         Init_Carry     => Init_Carry,
         
-        out_ram     => out_ram,
-        in_ram     => in_ram
+        out_ram     => mem_d_0,
+        in_ram     => mem_d_1
     );
 
-    my_UM: UC port map (
+    my_UM: UM port map (
         clk      => clk,
         ce       => ce,
         
-        rw       => rw,
-        enable   => enable,
+        rw       => RAM_RW,
+        enable   => RAM_EN,
         
-        addr   => addr,
-        data_in   => data_in,
-        data_out   => data_out
+        addr   => mem_a,
+        data_in   => mem_d_1,
+        data_out   => mem_d_0
     );
 
     ----------------------

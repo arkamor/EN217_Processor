@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../../../src/UC/PC.vhd"
+vhdl xil_defaultlib  "../../../../../src/UC/MUX_6.vhd"
+vhdl xil_defaultlib  "../../../../../src/UC/FSM.vhd"
+vhdl xil_defaultlib  "../../../../../src/common/REG_8.vhd"
+vhdl xil_defaultlib  "../../../../../src/UT/CARRY.vhd"
+vhdl xil_defaultlib  "../../../../../src/UT/ALU.vhd"
+vhdl xil_defaultlib  "../../../../../src/UM/UM.vhd"
+vhdl xil_defaultlib  "../../../../../src/UC/UC.vhd"
+vhdl xil_defaultlib  "../../../../../src/UT/UT.vhd"
+vhdl xil_defaultlib  "../../../../../src/acces_carte.vhd"
+vhdl xil_defaultlib  "../../../../../src/CPU.vhd"
+vhdl xil_defaultlib  "../../../../../src/CPU_top_level.vhd"
+
+# Do not sort compile order
+nosort

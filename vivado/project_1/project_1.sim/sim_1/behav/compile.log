@@ -1,4 +1,32 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MUX_6
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSM
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity REG_8
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CARRY
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram_tb
+INFO: [VRFC 10-307] analyzing entity UM
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity UC
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity UT
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity acces_carte
+INFO: [VRFC 10-307] analyzing entity Bin27s
+INFO: [VRFC 10-307] analyzing entity mux8_1
+INFO: [VRFC 10-307] analyzing entity modulo8
+INFO: [VRFC 10-307] analyzing entity gen_ce
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_8bits
+ERROR: [VRFC 10-91] rst is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:107]
+ERROR: [VRFC 10-91] rst is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:114]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:42]
+INFO: [VRFC 10-240] VHDL file C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd ignored due to errors

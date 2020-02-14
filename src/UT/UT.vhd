@@ -50,8 +50,8 @@ architecture Behavioral of UT is
 
     component REG_8
     PORT ( 
-        R_in  : in  std_logic_vector(7 downto 0);
-        R_out : out std_logic_vector(7 downto 0);
+        val_in  : in  std_logic_vector(7 downto 0);
+        val_out : out std_logic_vector(7 downto 0);
         
         load  : in  std_logic;
 
@@ -113,24 +113,28 @@ begin
     );
 
     reg_data: REG_8 port map ( 
-        R_in  => out_ram,
-        R_out => ALU_A,
+        val_in  => out_ram,
+        val_out => ALU_A,
         
-        load  => Sig_ctrl,
+        load  => Load_data,
 
-        clk   => Sig_ctrl,
-        ce    => Sig_ctrl,
-        rst   => Sig_ctrl
+        clk   => clk,
+        ce    => ce,
+        rst   => rst
     );
 
     reg_accu: REG_8 port map (
-        Sig_ctrl => Sig_ctrl,
-        Carry    => ALU_C,
+        val_in  => ALU_O,
+        val_out => ALU_B,
         
-        Reg_data => ALU_A,
-        Reg_accu => ALU_B,
-        Alu_out  => ALU_O
+        load  => Load_accu,
+
+        clk   => clk,
+        ce    => ce,
+        rst   => rst
     );
+
+    in_ram <= ALU_B;
 
 end Behavioral;
 

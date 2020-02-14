@@ -30,7 +30,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity CPU_8bits is
-    Port ( reset 		 : in  STD_LOGIC;
+    Port ( rst 		 : in  STD_LOGIC;
            clk100M 	     : in  STD_LOGIC;
 		   valid_saisie  : in  STD_LOGIC;
 	 	   AN            : out STD_LOGIC_VECTOR(7 downto 0);
@@ -52,7 +52,7 @@ end component;
 component CPU
     Port ( Clk 					 : in  STD_LOGIC;
 	       Ce					 : in  STD_LOGIC;
-           Reset 				 : in  STD_LOGIC;  
+           rst  				 : in  STD_LOGIC;  
 		   Adr					 : out  STD_LOGIC_VECTOR (5 downto 0);
 		   data_men_in			 : out  STD_LOGIC_VECTOR (7 downto 0);
 		   data_men_out			 : out  STD_LOGIC_VECTOR (7 downto 0));
@@ -60,7 +60,7 @@ end component;
 
 component acces_carte 
     port (clk 		    : in std_logic;
-	 	  reset  		: in std_logic;
+	 	  rst   		: in std_logic;
           AdrLSB 		: in std_logic_vector(3 downto 0);
           AdrMSB 		: in std_logic_vector(1 downto 0);
           DataLSB		: in std_logic_vector(3 downto 0);
@@ -104,14 +104,14 @@ Clock_IP : Clock_manager
 														  
 proc  				 : CPU port map ( clk25M,
                                       ce1s,
-									  reset, 
+									  rst, 
 									  Adr,
 									  Data_Unit_Mem,
 									  Data_Mem_Unit);
 
 
 Peripheriques 	 : acces_carte  port map (clk25M,
-										  Reset, 
+										  rst, 
 										  Adr(3 downto 0), 
 										  Adr(5 downto 4),
 										  Data_Unit_Mem(3 downto 0), 

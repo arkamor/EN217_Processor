@@ -1,0 +1,41 @@
+
+*** Running vivado
+    with args -log CPU_8bits.vds -m64 -mode batch -messageDb vivado.pb -notrace -source CPU_8bits.tcl
+
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source CPU_8bits.tcl -notrace
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2015.2/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-50:part0:1.0 available at C:/Xilinx/Vivado/2015.2/data/boards/board_files/arty-s7-50/B.0/board.xml as part xc7s50csga324-1 specified in board_part file is either invalid or not available
+Command: synth_design -top CPU_8bits -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-1223] The version limit for your license is '2018.06' and will expire in -594 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 281.836 ; gain = 102.500
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'CPU_8bits' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:42]
+INFO: [Synth 8-3491] module 'Clock_manager' declared at 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-10984-zico/realtime/Clock_manager_stub.v:6' bound to instance 'Clock_IP' of component 'Clock_manager' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'Clock_manager' [C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-10984-zico/realtime/Clock_manager_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'Clock_manager' (1#1) [C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-10984-zico/realtime/Clock_manager_stub.v:6]
+INFO: [Synth 8-3491] module 'CPU' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:12' bound to instance 'proc' of component 'CPU' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:105]
+ERROR: [Synth 8-3493] module 'cpu' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:12' does not have matching formal port for component port 'adr' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:105]
+ERROR: [Synth 8-3493] module 'cpu' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:12' does not have matching formal port for component port 'data_men_in' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:105]
+ERROR: [Synth 8-3493] module 'cpu' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:12' does not have matching formal port for component port 'data_men_out' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:105]
+INFO: [Synth 8-3491] module 'acces_carte' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd:7' bound to instance 'Peripheriques' of component 'acces_carte' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:113]
+ERROR: [Synth 8-3493] module 'acces_carte' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd:7' does not have matching formal port for component port 'rst' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:113]
+ERROR: [Synth 8-285] failed synthesizing module 'CPU_8bits' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:42]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 317.121 ; gain = 137.785
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+9 Infos, 2 Warnings, 0 Critical Warnings and 6 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 14 12:27:46 2020...

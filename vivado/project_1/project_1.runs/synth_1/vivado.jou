@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Fri Feb 14 12:27:40 2020
+# Process ID: 10984
+# Log file: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/synth_1/CPU_8bits.vds
+# Journal file: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source CPU_8bits.tcl -notrace

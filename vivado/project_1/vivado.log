@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Fri Feb 14 10:58:06 2020
-# Process ID: 10424
+# Start of session at: Fri Feb 14 11:23:28 2020
+# Process ID: 10948
 # Log file: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/vivado.log
 # Journal file: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1\vivado.jou
 #-----------------------------------------------------------
@@ -14,420 +14,1356 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'.
-remove_files {C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_FSM.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd}
+remove_files C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd
 update_compile_order -fileset sources_1
 update_compile_order -fileset sim_1
-add_files -norecurse {C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd}
+add_files C:/Users/maucher/Desktop/EN217_Processor/src
+WARNING: [filemgmt 56-12] File 'C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd' cannot be added to the project because it already exists in the project, skipping this file
+update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
 update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+remove_files {C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+remove_files C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+remove_files {C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+add_files {C:/Users/maucher/Desktop/EN217_Processor/src/common C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UM C:/Users/maucher/Desktop/EN217_Processor/src/UC C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UT C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+expected floating-point number but got ""
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 5.1 -module_name Clock_manager
+set_property -dict [list CONFIG.CLKOUT1_USED {true} CONFIG.CLK_IN1_BOARD_INTERFACE {Custom} CONFIG.CLK_IN2_BOARD_INTERFACE {Custom} CONFIG.RESET_BOARD_INTERFACE {Custom} CONFIG.PRIMARY_PORT {clk_in} CONFIG.CLK_OUT1_PORT {clk_out} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} CONFIG.RESET_PORT {reset} CONFIG.CLK_IN1_BOARD_INTERFACE {Custom} CONFIG.CLK_IN2_BOARD_INTERFACE {Custom} CONFIG.RESET_BOARD_INTERFACE {Custom} CONFIG.MMCM_DIVCLK_DIVIDE {4} CONFIG.MMCM_CLKFBOUT_MULT_F {36.375} CONFIG.MMCM_CLKOUT0_DIVIDE_F {36.375} CONFIG.CLKOUT1_JITTER {320.187} CONFIG.CLKOUT1_PHASE_ERROR {246.739}] [get_ips Clock_manager]
+generate_target {instantiation_template} [get_files c:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.srcs/sources_1/ip/Clock_manager/Clock_manager.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'Clock_manager'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  c:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.srcs/sources_1/ip/Clock_manager/Clock_manager.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'Clock_manager'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'Clock_manager'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'Clock_manager'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'Clock_manager'...
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.srcs/sources_1/ip/Clock_manager/Clock_manager.xci]
+launch_run -jobs 4 Clock_manager_synth_1
+[Fri Feb 14 11:30:33 2020] Launched Clock_manager_synth_1...
+Run output will be captured here: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/Clock_manager_synth_1/runme.log
+set_property top CPU [current_fileset]
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:01:37 ; elapsed = 00:07:24 . Memory (MB): peak = 884.414 ; gain = 704.617
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-989] load_accu is already declared in this region [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:127]
+ERROR: [Synth 8-989] sig_ctrl is already declared in this region [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:128]
+ERROR: [Synth 8-989] init_carry is already declared in this region [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:129]
+ERROR: [Synth 8-989] load_carry is already declared in this region [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:130]
+ERROR: [Synth 8-989] load_data is already declared in this region [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:131]
+ERROR: [Synth 8-989] carry is already declared in this region [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:132]
+ERROR: [Synth 8-989] ram_rw is already declared in this region [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:134]
+ERROR: [Synth 8-989] ram_en is already declared in this region [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:135]
+ERROR: [Synth 8-2549] positional association cannot follow named association [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:149]
+ERROR: [Synth 8-989] pc is already declared in this region [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:170]
+ERROR: [Synth 8-2029] formal enable has no actual or default value [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:170]
+INFO: [Synth 8-994] enable is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:107]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:37 ; elapsed = 00:07:24 . Memory (MB): peak = 915.320 ; gain = 735.523
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+2 Infos, 0 Warnings, 0 Critical Warnings and 12 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:01:55 ; elapsed = 00:10:39 . Memory (MB): peak = 919.957 ; gain = 740.160
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2549] positional association cannot follow named association [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:149]
+ERROR: [Synth 8-989] pc is already declared in this region [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:170]
+ERROR: [Synth 8-1031] pc_en is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:172]
+ERROR: [Synth 8-1031] pc_rst is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:173]
+ERROR: [Synth 8-1031] pc_load is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:174]
+ERROR: [Synth 8-1031] dat_bus is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:176]
+ERROR: [Synth 8-1031] pc_mux is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:177]
+ERROR: [Synth 8-1568] actual of formal out port pc_out cannot be an expression [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:177]
+ERROR: [Synth 8-2029] formal enable has no actual or default value [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:170]
+INFO: [Synth 8-994] enable is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:107]
+ERROR: [Synth 8-1031] reg_load is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:185]
+ERROR: [Synth 8-1031] dat_bus is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:188]
+ERROR: [Synth 8-1568] actual of formal out port r_out cannot be an expression [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:188]
+ERROR: [Synth 8-1031] dat_bus is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:193]
+ERROR: [Synth 8-1031] pc_mux is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:194]
+ERROR: [Synth 8-1031] mux_sel is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:197]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:55 ; elapsed = 00:10:40 . Memory (MB): peak = 919.957 ; gain = 740.160
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+2 Infos, 0 Warnings, 0 Critical Warnings and 16 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:02 ; elapsed = 00:12:12 . Memory (MB): peak = 919.957 ; gain = 740.160
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-1031] dat_bus is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:149]
+ERROR: [Synth 8-989] pc is already declared in this region [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:170]
+ERROR: [Synth 8-1031] pc_en is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:172]
+ERROR: [Synth 8-1031] pc_rst is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:173]
+ERROR: [Synth 8-1031] pc_load is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:174]
+ERROR: [Synth 8-1031] dat_bus is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:176]
+ERROR: [Synth 8-1031] pc_mux is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:177]
+ERROR: [Synth 8-1568] actual of formal out port pc_out cannot be an expression [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:177]
+ERROR: [Synth 8-2029] formal enable has no actual or default value [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:170]
+INFO: [Synth 8-994] enable is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:107]
+ERROR: [Synth 8-1031] reg_load is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:185]
+ERROR: [Synth 8-1031] dat_bus is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:188]
+ERROR: [Synth 8-1568] actual of formal out port r_out cannot be an expression [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:188]
+ERROR: [Synth 8-1031] dat_bus is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:193]
+ERROR: [Synth 8-1031] pc_mux is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:194]
+ERROR: [Synth 8-1031] mux_sel is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:197]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:02 ; elapsed = 00:12:13 . Memory (MB): peak = 919.957 ; gain = 740.160
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+2 Infos, 0 Warnings, 0 Critical Warnings and 16 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:06 ; elapsed = 00:13:04 . Memory (MB): peak = 919.957 ; gain = 740.160
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-1031] dat_bus is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:149]
+ERROR: [Synth 8-1031] pc_en is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:172]
+ERROR: [Synth 8-1031] pc_rst is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:173]
+ERROR: [Synth 8-1031] pc_load is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:174]
+ERROR: [Synth 8-1031] dat_bus is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:176]
+ERROR: [Synth 8-1031] pc_mux is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:177]
+ERROR: [Synth 8-1568] actual of formal out port pc_out cannot be an expression [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:177]
+ERROR: [Synth 8-2029] formal enable has no actual or default value [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:170]
+INFO: [Synth 8-994] enable is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:107]
+ERROR: [Synth 8-1031] reg_load is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:185]
+ERROR: [Synth 8-1031] dat_bus is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:188]
+ERROR: [Synth 8-1568] actual of formal out port r_out cannot be an expression [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:188]
+ERROR: [Synth 8-1031] dat_bus is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:193]
+ERROR: [Synth 8-1031] pc_mux is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:194]
+ERROR: [Synth 8-1031] mux_sel is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:197]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:07 ; elapsed = 00:13:04 . Memory (MB): peak = 919.957 ; gain = 740.160
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+2 Infos, 0 Warnings, 0 Critical Warnings and 15 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:11 ; elapsed = 00:13:51 . Memory (MB): peak = 925.176 ; gain = 745.379
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-1031] pc_en is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:172]
+ERROR: [Synth 8-1031] pc_rst is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:173]
+ERROR: [Synth 8-1031] pc_load is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:174]
+ERROR: [Synth 8-1031] dat_bus is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:176]
+ERROR: [Synth 8-1031] pc_mux is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:177]
+ERROR: [Synth 8-1568] actual of formal out port pc_out cannot be an expression [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:177]
+ERROR: [Synth 8-2029] formal enable has no actual or default value [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:170]
+INFO: [Synth 8-994] enable is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:107]
+ERROR: [Synth 8-1031] reg_load is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:185]
+ERROR: [Synth 8-1031] dat_bus is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:188]
+ERROR: [Synth 8-1568] actual of formal out port r_out cannot be an expression [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:188]
+ERROR: [Synth 8-1031] dat_bus is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:193]
+ERROR: [Synth 8-1031] pc_mux is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:194]
+ERROR: [Synth 8-1031] mux_sel is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:197]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:12 ; elapsed = 00:13:52 . Memory (MB): peak = 925.176 ; gain = 745.379
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+2 Infos, 0 Warnings, 0 Critical Warnings and 14 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:15 ; elapsed = 00:14:22 . Memory (MB): peak = 925.176 ; gain = 745.379
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2029] formal enable has no actual or default value [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:170]
+INFO: [Synth 8-994] enable is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:107]
+ERROR: [Synth 8-1031] int_data_ram is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:188]
+ERROR: [Synth 8-1031] int_addr_ram is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:196]
+ERROR: [Synth 8-1568] actual of formal out port m_out cannot be an expression [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:196]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:16 ; elapsed = 00:14:23 . Memory (MB): peak = 925.176 ; gain = 745.379
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+2 Infos, 0 Warnings, 0 Critical Warnings and 5 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:22 ; elapsed = 00:16:17 . Memory (MB): peak = 925.176 ; gain = 745.379
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2029] formal enable has no actual or default value [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:170]
+INFO: [Synth 8-994] enable is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:107]
+ERROR: [Synth 8-1031] int_addr_ram is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:196]
+ERROR: [Synth 8-1568] actual of formal out port m_out cannot be an expression [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:196]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:23 ; elapsed = 00:16:18 . Memory (MB): peak = 925.176 ; gain = 745.379
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+2 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:26 ; elapsed = 00:16:28 . Memory (MB): peak = 925.176 ; gain = 745.379
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2029] formal enable has no actual or default value [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:170]
+INFO: [Synth 8-994] enable is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:107]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:27 ; elapsed = 00:16:28 . Memory (MB): peak = 925.176 ; gain = 745.379
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+2 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:31 ; elapsed = 00:18:30 . Memory (MB): peak = 925.176 ; gain = 745.379
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-1031] int_pc_enable is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:176]
+ERROR: [Synth 8-2032] formal init is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:177]
+ERROR: [Synth 8-2029] formal pc_in has no actual or default value [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:170]
+INFO: [Synth 8-994] pc_in is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:109]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:31 ; elapsed = 00:18:30 . Memory (MB): peak = 925.176 ; gain = 745.379
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+2 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:35 ; elapsed = 00:18:58 . Memory (MB): peak = 925.176 ; gain = 745.379
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-1031] int_pc_enable is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:176]
+ERROR: [Synth 8-2032] formal init is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:177]
+ERROR: [Synth 8-2029] formal pc_in has no actual or default value [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:170]
+INFO: [Synth 8-994] pc_in is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:109]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:36 ; elapsed = 00:18:59 . Memory (MB): peak = 925.176 ; gain = 745.379
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+2 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:40 ; elapsed = 00:20:49 . Memory (MB): peak = 925.176 ; gain = 745.379
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2032] formal init is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:177]
+ERROR: [Synth 8-2029] formal pc_in has no actual or default value [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:170]
+INFO: [Synth 8-994] pc_in is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:109]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:41 ; elapsed = 00:20:49 . Memory (MB): peak = 925.711 ; gain = 745.914
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+2 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:46 ; elapsed = 00:22:02 . Memory (MB): peak = 925.711 ; gain = 745.914
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2032] formal sig_ctrl is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:127]
+ERROR: [Synth 8-2029] formal r_in has no actual or default value [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:126]
+INFO: [Synth 8-994] r_in is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:53]
+INFO: [Synth 8-994] load is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:56]
+INFO: [Synth 8-994] clk is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:58]
+INFO: [Synth 8-994] ce is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:59]
+INFO: [Synth 8-994] rst is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:60]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:34]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:46 ; elapsed = 00:22:03 . Memory (MB): peak = 926.434 ; gain = 746.637
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+6 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:53 ; elapsed = 00:25:21 . Memory (MB): peak = 926.434 ; gain = 746.637
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-1031] addr_ram is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:143]
+ERROR: [Synth 8-1568] actual of formal out port addr_ram cannot be an expression [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:143]
+ERROR: [Synth 8-1031] data_ram is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:144]
+ERROR: [Synth 8-2032] formal carry is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:154]
+ERROR: [Synth 8-2029] formal load_carry has no actual or default value [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:147]
+INFO: [Synth 8-994] load_carry is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:44]
+INFO: [Synth 8-994] load_data is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:45]
+INFO: [Synth 8-994] init_carry is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:46]
+INFO: [Synth 8-994] out_ram is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:49]
+ERROR: [Synth 8-1031] addr is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:170]
+ERROR: [Synth 8-1031] data_in is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:171]
+ERROR: [Synth 8-1031] data_out is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:172]
+ERROR: [Synth 8-1568] actual of formal out port data_out cannot be an expression [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:172]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:54 ; elapsed = 00:25:22 . Memory (MB): peak = 926.434 ; gain = 746.637
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+5 Infos, 0 Warnings, 0 Critical Warnings and 10 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:59 ; elapsed = 00:28:13 . Memory (MB): peak = 926.434 ; gain = 746.637
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2032] formal carry is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:154]
+ERROR: [Synth 8-2029] formal load_carry has no actual or default value [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:147]
+INFO: [Synth 8-994] load_carry is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:44]
+INFO: [Synth 8-994] load_data is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:45]
+INFO: [Synth 8-994] init_carry is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:46]
+INFO: [Synth 8-994] out_ram is declared here [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:49]
+ERROR: [Synth 8-1031] addr is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:170]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:03:00 ; elapsed = 00:28:14 . Memory (MB): peak = 927.410 ; gain = 747.613
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+5 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:03:09 ; elapsed = 00:31:47 . Memory (MB): peak = 931.191 ; gain = 751.395
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-1031] addr is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:170]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:03:09 ; elapsed = 00:31:48 . Memory (MB): peak = 931.191 ; gain = 751.395
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+1 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:03:13 ; elapsed = 00:32:27 . Memory (MB): peak = 931.191 ; gain = 751.395
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'CPU' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+INFO: [Synth 8-3491] module 'UC' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:12' bound to instance 'my_UC' of component 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+INFO: [Synth 8-3491] module 'FSM' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:12' bound to instance 'my_FSM' of component 'FSM' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'FSM' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:48]
+INFO: [Synth 8-226] default block is never used [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:113]
+INFO: [Synth 8-256] done synthesizing module 'FSM' (1#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:48]
+ERROR: [Synth 8-97] array index 8 out of range [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:150]
+ERROR: [Synth 8-285] failed synthesizing module 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+ERROR: [Synth 8-285] failed synthesizing module 'CPU' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:03:13 ; elapsed = 00:32:27 . Memory (MB): peak = 931.191 ; gain = 751.395
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+7 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
 launch_simulation
 INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ram_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-37] Inspecting design source files for 'CPU_8bits' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj ram_tb_vhdl.prj"
+"xvlog -m64 --relax -prj CPU_8bits_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.srcs/sources_1/ip/Clock_manager/Clock_manager_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Clock_manager_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.srcs/sources_1/ip/Clock_manager/Clock_manager.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Clock_manager
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl -m64 --relax -prj CPU_8bits_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MUX_6
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSM
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity REG_8
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CARRY
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram
-ERROR: [VRFC 10-1471] type error near addr ; current type std_logic_vector; expected type integer [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:39]
-ERROR: [VRFC 10-408] cannot convert type std_logic_vector to type integer [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:43]
-ERROR: [VRFC 10-1504] unit rtl ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:18]
-INFO: [VRFC 10-240] VHDL file C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd ignored due to errors
-ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ram_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj ram_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram
-ERROR: [VRFC 10-408] cannot convert type std_logic_vector to type integer [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:38]
-ERROR: [VRFC 10-1504] unit rtl ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:18]
-INFO: [VRFC 10-240] VHDL file C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd ignored due to errors
-ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ram_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj ram_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram
-ERROR: [VRFC 10-91] to_unsigned is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:38]
-ERROR: [VRFC 10-1083] near integer ; type conversion expression type cannot be determined uniquely [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:38]
-ERROR: [VRFC 10-1504] unit rtl ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:18]
-INFO: [VRFC 10-240] VHDL file C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd ignored due to errors
-ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ram_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj ram_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram
-ERROR: [VRFC 10-408] cannot convert type std_logic_vector to type integer [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:39]
-ERROR: [VRFC 10-1504] unit rtl ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:19]
-INFO: [VRFC 10-240] VHDL file C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd ignored due to errors
-ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ram_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj ram_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram_tb
+INFO: [VRFC 10-307] analyzing entity UM
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity UC
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity UT
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity acces_carte
+INFO: [VRFC 10-307] analyzing entity Bin27s
+INFO: [VRFC 10-307] analyzing entity mux8_1
+INFO: [VRFC 10-307] analyzing entity modulo8
+INFO: [VRFC 10-307] analyzing entity gen_ce
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_8bits
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
 Vivado Simulator 2015.2
 Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 652b1fe8ef2f44079555a146896abe3b --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ram_tb_behav xil_defaultlib.ram_tb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 652b1fe8ef2f44079555a146896abe3b --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_8bits_behav xil_defaultlib.CPU_8bits xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-664] expression has 8 elements ; expected 7 [C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd:56]
-ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit ram_tb in library work failed.
+ERROR: [VRFC 10-718] formal port <Reset> does not exist in entity <CPU>.  Please compare the definition of block <CPU> to its component declaration and its instantion to detect the mismatch. [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:55]
+ERROR: [VRFC 10-718] formal port <Adr> does not exist in entity <CPU>.  Please compare the definition of block <CPU> to its component declaration and its instantion to detect the mismatch. [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:56]
+ERROR: [VRFC 10-718] formal port <data_men_in> does not exist in entity <CPU>.  Please compare the definition of block <CPU> to its component declaration and its instantion to detect the mismatch. [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:57]
+ERROR: [VRFC 10-718] formal port <data_men_out> does not exist in entity <CPU>.  Please compare the definition of block <CPU> to its component declaration and its instantion to detect the mismatch. [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:58]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
 INFO: [USF-XSim-99] Step results log file:'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav/elaborate.log'
 ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav/elaborate.log' file for more information.
+expected floating-point number but got ""
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:03:27 ; elapsed = 00:35:34 . Memory (MB): peak = 938.277 ; gain = 758.480
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'CPU' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+INFO: [Synth 8-3491] module 'UC' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:12' bound to instance 'my_UC' of component 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+INFO: [Synth 8-3491] module 'FSM' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:12' bound to instance 'my_FSM' of component 'FSM' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'FSM' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:48]
+INFO: [Synth 8-226] default block is never used [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:113]
+INFO: [Synth 8-256] done synthesizing module 'FSM' (1#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:48]
+INFO: [Synth 8-3491] module 'PC' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:5' bound to instance 'my_PC' of component 'PC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'PC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'PC' (2#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:20]
+INFO: [Synth 8-3491] module 'REG_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' bound to instance 'Reg_ins' of component 'REG_8' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:186]
+ERROR: [Synth 8-3493] module 'reg_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' does not have matching formal port for component port 'r_in' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:186]
+ERROR: [Synth 8-3493] module 'reg_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' does not have matching formal port for component port 'r_out' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:186]
+INFO: [Synth 8-3491] module 'MUX_6' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd:4' bound to instance 'mux' of component 'MUX_6' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:198]
+ERROR: [Synth 8-285] failed synthesizing module 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+ERROR: [Synth 8-285] failed synthesizing module 'CPU' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:03:28 ; elapsed = 00:35:35 . Memory (MB): peak = 944.926 ; gain = 765.129
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+12 Infos, 0 Warnings, 0 Critical Warnings and 5 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+add_files -fileset constrs_1 -norecurse C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc
 launch_simulation
 INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ram_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-37] Inspecting design source files for 'CPU_8bits' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj ram_tb_vhdl.prj"
+"xvlog -m64 --relax -prj CPU_8bits_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.srcs/sources_1/ip/Clock_manager/Clock_manager_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Clock_manager_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.srcs/sources_1/ip/Clock_manager/Clock_manager.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Clock_manager
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl -m64 --relax -prj CPU_8bits_vhdl.prj"
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MUX_6
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSM
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity REG_8
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CARRY
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram_tb
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-Vivado Simulator 2015.2
-Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 652b1fe8ef2f44079555a146896abe3b --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ram_tb_behav xil_defaultlib.ram_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-ERROR: [VRFC 10-664] expression has 6 elements ; expected 7 [C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd:56]
-ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit ram_tb in library work failed.
-INFO: [USF-XSim-99] Step results log file:'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav/elaborate.log' file for more information.
+INFO: [VRFC 10-307] analyzing entity UM
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity UC
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity UT
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity acces_carte
+INFO: [VRFC 10-307] analyzing entity Bin27s
+INFO: [VRFC 10-307] analyzing entity mux8_1
+INFO: [VRFC 10-307] analyzing entity modulo8
+INFO: [VRFC 10-307] analyzing entity gen_ce
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_8bits
+ERROR: [VRFC 10-91] rst is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:107]
+ERROR: [VRFC 10-91] rst is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:114]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:42]
+INFO: [VRFC 10-240] VHDL file C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd ignored due to errors
+INFO: [Common 17-344] 'run_program' was cancelled
+1
+    while executing
+"catch {rdi::run_program $scr_file} error_log"
+    (procedure "::tclapp::xilinx::xsim::usf_launch_script" line 35)
+    invoked from within
+"::tclapp::xilinx::xsim::usf_launch_script "xsim" $step"
+    (procedure "tclapp::xilinx::xsim::compile" line 13)
+    invoked from within
+"tclapp::xilinx::xsim::compile { -simset sim_1 -mode behavioral -run_dir C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/..."
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:03:34 ; elapsed = 00:36:46 . Memory (MB): peak = 944.926 ; gain = 765.129
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'CPU' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+INFO: [Synth 8-3491] module 'UC' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:12' bound to instance 'my_UC' of component 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+INFO: [Synth 8-3491] module 'FSM' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:12' bound to instance 'my_FSM' of component 'FSM' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'FSM' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:48]
+INFO: [Synth 8-226] default block is never used [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:113]
+INFO: [Synth 8-256] done synthesizing module 'FSM' (1#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:48]
+INFO: [Synth 8-3491] module 'PC' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:5' bound to instance 'my_PC' of component 'PC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'PC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'PC' (2#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:20]
+INFO: [Synth 8-3491] module 'REG_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' bound to instance 'Reg_ins' of component 'REG_8' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:186]
+ERROR: [Synth 8-3493] module 'reg_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' does not have matching formal port for component port 'r_in' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:186]
+ERROR: [Synth 8-3493] module 'reg_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' does not have matching formal port for component port 'r_out' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:186]
+INFO: [Synth 8-3491] module 'MUX_6' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd:4' bound to instance 'mux' of component 'MUX_6' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:198]
+ERROR: [Synth 8-285] failed synthesizing module 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+ERROR: [Synth 8-285] failed synthesizing module 'CPU' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:03:34 ; elapsed = 00:36:47 . Memory (MB): peak = 946.777 ; gain = 766.980
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+12 Infos, 0 Warnings, 0 Critical Warnings and 5 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:03:40 ; elapsed = 00:38:32 . Memory (MB): peak = 946.777 ; gain = 766.980
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'CPU' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+INFO: [Synth 8-3491] module 'UC' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:12' bound to instance 'my_UC' of component 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+INFO: [Synth 8-3491] module 'FSM' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:12' bound to instance 'my_FSM' of component 'FSM' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'FSM' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:48]
+INFO: [Synth 8-226] default block is never used [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:113]
+INFO: [Synth 8-256] done synthesizing module 'FSM' (1#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:48]
+INFO: [Synth 8-3491] module 'PC' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:5' bound to instance 'my_PC' of component 'PC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'PC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'PC' (2#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:20]
+INFO: [Synth 8-3491] module 'REG_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' bound to instance 'Reg_ins' of component 'REG_8' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'REG_8' [C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'REG_8' (3#1) [C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:18]
+INFO: [Synth 8-3491] module 'MUX_6' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd:4' bound to instance 'mux' of component 'MUX_6' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:198]
+INFO: [Synth 8-638] synthesizing module 'MUX_6' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'MUX_6' (4#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd:13]
+WARNING: [Synth 8-3848] Net Load_Accu in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:20]
+WARNING: [Synth 8-3848] Net Sig_ctrl in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:21]
+WARNING: [Synth 8-3848] Net Load_Carry in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:23]
+WARNING: [Synth 8-3848] Net Load_data in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:24]
+WARNING: [Synth 8-3848] Net Init_Carry in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:25]
+WARNING: [Synth 8-3848] Net RAM_EN in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:28]
+WARNING: [Synth 8-3848] Net RAM_RW in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:29]
+WARNING: [Synth 8-3848] Net int_Carry in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:133]
+INFO: [Synth 8-256] done synthesizing module 'UC' (5#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+INFO: [Synth 8-3491] module 'UT' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:12' bound to instance 'my_UT' of component 'UT' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'UT' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:34]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd:6' bound to instance 'my_ALU' of component 'ALU' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (6#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd:16]
+INFO: [Synth 8-3491] module 'CARRY' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd:5' bound to instance 'my_carry' of component 'CARRY' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'CARRY' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'CARRY' (7#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd:20]
+INFO: [Synth 8-3491] module 'REG_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' bound to instance 'reg_data' of component 'REG_8' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:115]
+INFO: [Synth 8-3491] module 'REG_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' bound to instance 'reg_accu' of component 'REG_8' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'UT' (8#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:34]
+INFO: [Synth 8-3491] module 'UM' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:5' bound to instance 'my_UM' of component 'UM' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:163]
+INFO: [Synth 8-638] synthesizing module 'UM' [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'UM' (9#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:19]
+ERROR: [Synth 8-549] port width mismatch for port 'addr': port width = 6, actual width = 7 [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:163]
+ERROR: [Synth 8-285] failed synthesizing module 'CPU' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:03:40 ; elapsed = 00:38:33 . Memory (MB): peak = 947.895 ; gain = 768.098
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+31 Infos, 8 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:03:45 ; elapsed = 00:40:17 . Memory (MB): peak = 947.895 ; gain = 768.098
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'CPU' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+INFO: [Synth 8-3491] module 'UC' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:12' bound to instance 'my_UC' of component 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+INFO: [Synth 8-3491] module 'FSM' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:12' bound to instance 'my_FSM' of component 'FSM' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'FSM' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:48]
+INFO: [Synth 8-226] default block is never used [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:113]
+INFO: [Synth 8-256] done synthesizing module 'FSM' (1#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:48]
+INFO: [Synth 8-3491] module 'PC' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:5' bound to instance 'my_PC' of component 'PC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'PC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'PC' (2#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:20]
+INFO: [Synth 8-3491] module 'REG_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' bound to instance 'Reg_ins' of component 'REG_8' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'REG_8' [C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'REG_8' (3#1) [C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:18]
+INFO: [Synth 8-3491] module 'MUX_6' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd:4' bound to instance 'mux' of component 'MUX_6' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:198]
+INFO: [Synth 8-638] synthesizing module 'MUX_6' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'MUX_6' (4#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd:13]
+WARNING: [Synth 8-3848] Net Load_Accu in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:20]
+WARNING: [Synth 8-3848] Net Sig_ctrl in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:21]
+WARNING: [Synth 8-3848] Net Load_Carry in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:23]
+WARNING: [Synth 8-3848] Net Load_data in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:24]
+WARNING: [Synth 8-3848] Net Init_Carry in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:25]
+WARNING: [Synth 8-3848] Net RAM_EN in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:28]
+WARNING: [Synth 8-3848] Net RAM_RW in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:29]
+WARNING: [Synth 8-3848] Net int_Carry in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:133]
+INFO: [Synth 8-256] done synthesizing module 'UC' (5#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+INFO: [Synth 8-3491] module 'UT' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:12' bound to instance 'my_UT' of component 'UT' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'UT' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:34]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd:6' bound to instance 'my_ALU' of component 'ALU' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (6#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd:16]
+INFO: [Synth 8-3491] module 'CARRY' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd:5' bound to instance 'my_carry' of component 'CARRY' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'CARRY' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'CARRY' (7#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd:20]
+INFO: [Synth 8-3491] module 'REG_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' bound to instance 'reg_data' of component 'REG_8' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:115]
+INFO: [Synth 8-3491] module 'REG_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' bound to instance 'reg_accu' of component 'REG_8' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'UT' (8#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:34]
+INFO: [Synth 8-3491] module 'UM' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:5' bound to instance 'my_UM' of component 'UM' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:163]
+INFO: [Synth 8-638] synthesizing module 'UM' [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'UM' (9#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:19]
+WARNING: [Synth 8-3848] Net M_addr in module/entity CPU does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:19]
+WARNING: [Synth 8-3848] Net M_data_o in module/entity CPU does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:20]
+WARNING: [Synth 8-3848] Net M_data_i in module/entity CPU does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:21]
+WARNING: [Synth 8-3848] Net rw in module/entity CPU does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:119]
+WARNING: [Synth 8-3848] Net enable in module/entity CPU does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:120]
+INFO: [Synth 8-256] done synthesizing module 'CPU' (10#1) [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[7]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[6]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[5]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[4]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[3]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[2]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[1]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[0]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[7]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[6]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[5]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[4]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[3]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[2]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[1]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[0]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[7]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[6]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[5]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[4]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[3]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[2]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[1]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:03:46 ; elapsed = 00:40:17 . Memory (MB): peak = 948.691 ; gain = 768.895
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin my_FSM:Carry to constant 0 [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin my_UM:rw to constant 0 [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:163]
+WARNING: [Synth 8-3295] tying undriven pin my_UM:enable to constant 0 [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:163]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:46 ; elapsed = 00:40:18 . Memory (MB): peak = 948.691 ; gain = 768.895
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk100M'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk100M'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk100M'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:10]
+CRITICAL WARNING: [Vivado 12-1387] No valid object(s) found for create_clock constraint with option '-objects [get_ports clk100M]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:10]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'valid_saisie'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'valid_saisie'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[0]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[0]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[1]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:140]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[1]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[2]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:143]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:143]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[2]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[3]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[3]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[4]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[4]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:150]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[5]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[5]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[6]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[6]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:156]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:156]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[7]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[7]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:159]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:159]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[7]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:162]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:162]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[7]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:163]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[6]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:165]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:165]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[6]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:166]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:166]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[5]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:168]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:168]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[5]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:169]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[4]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:171]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:171]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[4]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:172]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:172]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[3]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:174]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:174]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[3]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:175]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:175]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[2]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:177]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:177]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[2]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:178]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:178]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[1]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:180]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:180]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[1]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:181]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:181]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[0]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:183]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:183]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[0]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:184]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:184]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:04:01 ; elapsed = 00:40:27 . Memory (MB): peak = 1243.027 ; gain = 1063.230
+35 Infos, 93 Warnings, 53 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 1243.027 ; gain = 295.133
 launch_simulation
 INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ram_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-37] Inspecting design source files for 'CPU_8bits' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj ram_tb_vhdl.prj"
+"xvlog -m64 --relax -prj CPU_8bits_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.srcs/sources_1/ip/Clock_manager/Clock_manager_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Clock_manager_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.srcs/sources_1/ip/Clock_manager/Clock_manager.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Clock_manager
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl -m64 --relax -prj CPU_8bits_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MUX_6
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSM
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity REG_8
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CARRY
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram_tb
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-Vivado Simulator 2015.2
-Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 652b1fe8ef2f44079555a146896abe3b --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ram_tb_behav xil_defaultlib.ram_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-ERROR: [VRFC 10-664] expression has 8 elements ; expected 6 [C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd:60]
-ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit ram_tb in library work failed.
-INFO: [USF-XSim-99] Step results log file:'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav/elaborate.log' file for more information.
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ram_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj ram_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram_tb
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-Vivado Simulator 2015.2
-Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 652b1fe8ef2f44079555a146896abe3b --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ram_tb_behav xil_defaultlib.ram_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture rtl of entity xil_defaultlib.ram [ram_default]
-Compiling architecture bench of entity xil_defaultlib.ram_tb
-Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot ram_tb_behav
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "ram_tb_behav -key {Behavioral:sim_1:Functional:ram_tb} -tclbatch {ram_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2015.2
-Time resolution is 1 ps
-source ram_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'ram_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 786.969 ; gain = 21.395
-add_wave {{/ram_tb/uut/ram}} 
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 1000ns
-add_wave {{/ram_tb/uut/ram}} 
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ram_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj ram_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram_tb
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-Vivado Simulator 2015.2
-Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 652b1fe8ef2f44079555a146896abe3b --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ram_tb_behav xil_defaultlib.ram_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture rtl of entity xil_defaultlib.ram [ram_default]
-Compiling architecture bench of entity xil_defaultlib.ram_tb
-Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot ram_tb_behav
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "ram_tb_behav -key {Behavioral:sim_1:Functional:ram_tb} -tclbatch {ram_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2015.2
-Time resolution is 1 ps
-source ram_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'ram_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 807.387 ; gain = 0.000
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 100ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ram_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj ram_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram_tb
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-Vivado Simulator 2015.2
-Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 652b1fe8ef2f44079555a146896abe3b --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ram_tb_behav xil_defaultlib.ram_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture rtl of entity xil_defaultlib.ram [ram_default]
-Compiling architecture bench of entity xil_defaultlib.ram_tb
-Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot ram_tb_behav
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "ram_tb_behav -key {Behavioral:sim_1:Functional:ram_tb} -tclbatch {ram_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2015.2
-Time resolution is 1 ps
-source ram_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'ram_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 813.340 ; gain = 0.000
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 200ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ram_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj ram_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram_tb
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-Vivado Simulator 2015.2
-Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 652b1fe8ef2f44079555a146896abe3b --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ram_tb_behav xil_defaultlib.ram_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture rtl of entity xil_defaultlib.ram [ram_default]
-Compiling architecture bench of entity xil_defaultlib.ram_tb
-Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot ram_tb_behav
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "ram_tb_behav -key {Behavioral:sim_1:Functional:ram_tb} -tclbatch {ram_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2015.2
-Time resolution is 1 ps
-source ram_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'ram_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 813.340 ; gain = 0.000
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 200ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ram_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj ram_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ram_tb
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-Vivado Simulator 2015.2
-Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 652b1fe8ef2f44079555a146896abe3b --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ram_tb_behav xil_defaultlib.ram_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture rtl of entity xil_defaultlib.ram [ram_default]
-Compiling architecture bench of entity xil_defaultlib.ram_tb
-Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot ram_tb_behav
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "ram_tb_behav -key {Behavioral:sim_1:Functional:ram_tb} -tclbatch {ram_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2015.2
-Time resolution is 1 ps
-source ram_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'ram_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 813.340 ; gain = 0.000
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 200ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
+INFO: [VRFC 10-307] analyzing entity UM
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity UC
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity UT
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity acces_carte
+INFO: [VRFC 10-307] analyzing entity Bin27s
+INFO: [VRFC 10-307] analyzing entity mux8_1
+INFO: [VRFC 10-307] analyzing entity modulo8
+INFO: [VRFC 10-307] analyzing entity gen_ce
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_8bits
+ERROR: [VRFC 10-91] rst is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:107]
+ERROR: [VRFC 10-91] rst is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:114]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:42]
+INFO: [VRFC 10-240] VHDL file C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd ignored due to errors
+ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.sim/sim_1/behav/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:04:21 ; elapsed = 00:44:00 . Memory (MB): peak = 1266.098 ; gain = 1086.301
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'CPU' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+INFO: [Synth 8-3491] module 'UC' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:12' bound to instance 'my_UC' of component 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'UC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+INFO: [Synth 8-3491] module 'FSM' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:12' bound to instance 'my_FSM' of component 'FSM' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'FSM' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:48]
+INFO: [Synth 8-226] default block is never used [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:113]
+INFO: [Synth 8-256] done synthesizing module 'FSM' (1#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:48]
+INFO: [Synth 8-3491] module 'PC' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:5' bound to instance 'my_PC' of component 'PC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'PC' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'PC' (2#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:20]
+INFO: [Synth 8-3491] module 'REG_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' bound to instance 'Reg_ins' of component 'REG_8' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'REG_8' [C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'REG_8' (3#1) [C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:18]
+INFO: [Synth 8-3491] module 'MUX_6' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd:4' bound to instance 'mux' of component 'MUX_6' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:198]
+INFO: [Synth 8-638] synthesizing module 'MUX_6' [C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'MUX_6' (4#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd:13]
+WARNING: [Synth 8-3848] Net Load_Accu in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:20]
+WARNING: [Synth 8-3848] Net Sig_ctrl in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:21]
+WARNING: [Synth 8-3848] Net Load_Carry in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:23]
+WARNING: [Synth 8-3848] Net Load_data in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:24]
+WARNING: [Synth 8-3848] Net Init_Carry in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:25]
+WARNING: [Synth 8-3848] Net RAM_EN in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:28]
+WARNING: [Synth 8-3848] Net RAM_RW in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:29]
+WARNING: [Synth 8-3848] Net int_Carry in module/entity UC does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:133]
+INFO: [Synth 8-256] done synthesizing module 'UC' (5#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:38]
+INFO: [Synth 8-3491] module 'UT' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:12' bound to instance 'my_UT' of component 'UT' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'UT' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:34]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd:6' bound to instance 'my_ALU' of component 'ALU' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (6#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd:16]
+INFO: [Synth 8-3491] module 'CARRY' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd:5' bound to instance 'my_carry' of component 'CARRY' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'CARRY' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'CARRY' (7#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd:20]
+INFO: [Synth 8-3491] module 'REG_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' bound to instance 'reg_data' of component 'REG_8' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:115]
+INFO: [Synth 8-3491] module 'REG_8' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:5' bound to instance 'reg_accu' of component 'REG_8' [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'UT' (8#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:34]
+INFO: [Synth 8-3491] module 'UM' declared at 'C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:5' bound to instance 'my_UM' of component 'UM' [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:163]
+INFO: [Synth 8-638] synthesizing module 'UM' [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'UM' (9#1) [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:19]
+WARNING: [Synth 8-3848] Net M_addr in module/entity CPU does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:19]
+WARNING: [Synth 8-3848] Net M_data_o in module/entity CPU does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:20]
+WARNING: [Synth 8-3848] Net M_data_i in module/entity CPU does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:21]
+WARNING: [Synth 8-3848] Net rw in module/entity CPU does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:119]
+WARNING: [Synth 8-3848] Net enable in module/entity CPU does not have driver. [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:120]
+INFO: [Synth 8-256] done synthesizing module 'CPU' (10#1) [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:27]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[7]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[6]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[5]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[4]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[3]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[2]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[1]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_addr[0]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[7]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[6]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[5]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[4]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[3]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[2]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[1]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_o[0]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[7]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[6]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[5]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[4]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[3]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[2]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[1]
+WARNING: [Synth 8-3331] design CPU has unconnected port M_data_i[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:04:21 ; elapsed = 00:44:01 . Memory (MB): peak = 1266.098 ; gain = 1086.301
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin my_FSM:Carry to constant 0 [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin my_UM:rw to constant 0 [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:163]
+WARNING: [Synth 8-3295] tying undriven pin my_UM:enable to constant 0 [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:163]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:04:22 ; elapsed = 00:44:01 . Memory (MB): peak = 1266.098 ; gain = 1086.301
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk100M'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk100M'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk100M'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:10]
+CRITICAL WARNING: [Vivado 12-1387] No valid object(s) found for create_clock constraint with option '-objects [get_ports clk100M]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:10]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'valid_saisie'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'valid_saisie'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[0]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[0]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[1]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:140]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[1]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[2]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:143]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:143]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[2]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[3]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[3]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[4]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[4]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:150]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[5]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[5]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[6]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[6]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:156]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:156]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[7]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Sevenseg[7]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:159]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:159]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[7]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:162]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:162]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[7]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:163]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[6]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:165]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:165]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[6]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:166]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:166]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[5]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:168]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:168]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[5]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:169]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[4]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:171]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:171]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[4]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:172]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:172]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[3]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:174]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:174]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[3]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:175]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:175]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[2]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:177]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:177]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[2]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:178]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:178]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[1]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:180]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:180]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[1]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:181]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:181]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[0]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:183]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:183]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[0]'. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:184]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc:184]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/maucher/Desktop/EN217_Processor/src/Nexys4_CPU.xdc]
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1339.969 ; gain = 73.871
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:04:40 ; elapsed = 00:46:02 . Memory (MB): peak = 1339.969 ; gain = 1160.172
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-1807] character '0' is not in type std_logic_vector [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:31]
+INFO: [Synth 8-2810] unit rtl ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:19]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:04:41 ; elapsed = 00:46:02 . Memory (MB): peak = 1339.969 ; gain = 1160.172
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+launch_runs synth_1 -jobs 4
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd:1]
+[Fri Feb 14 12:09:58 2020] Launched synth_1...
+Run output will be captured here: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd:1]
+[Fri Feb 14 12:10:37 2020] Launched synth_1...
+Run output will be captured here: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Fri Feb 14 12:11:15 2020] Launched impl_1...
+Run output will be captured here: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Fri Feb 14 12:13:49 2020] Launched synth_1...
+Run output will be captured here: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/synth_1/runme.log
+[Fri Feb 14 12:13:49 2020] Launched impl_1...
+Run output will be captured here: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/impl_1/runme.log
+set_property top UM [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/CPU.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd" into library xil_defaultlib [C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd:1]
+[Fri Feb 14 12:20:20 2020] Launched synth_1...
+Run output will be captured here: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/synth_1/runme.log
+set_property top CPU [current_fileset]
+update_compile_order -fileset sources_1
+set_property top CPU_8bits [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Fri Feb 14 12:25:43 2020] Launched synth_1...
+Run output will be captured here: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/synth_1/runme.log
+[Fri Feb 14 12:25:43 2020] Launched impl_1...
+Run output will be captured here: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Fri Feb 14 12:26:34 2020] Launched synth_1...
+Run output will be captured here: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/synth_1/runme.log
+[Fri Feb 14 12:26:34 2020] Launched impl_1...
+Run output will be captured here: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Fri Feb 14 12:27:38 2020] Launched synth_1...
+Run output will be captured here: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/synth_1/runme.log
+[Fri Feb 14 12:27:38 2020] Launched impl_1...
+Run output will be captured here: C:/Users/maucher/Desktop/EN217_Processor/vivado/project_1/project_1.runs/impl_1/runme.log
 exit
-INFO: [Common 17-206] Exiting Vivado at Fri Feb 14 11:16:20 2020...
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 14 12:27:58 2020...

@@ -76,8 +76,8 @@ architecture Behavioral of UC is
 
     component REG_8
     PORT ( 
-        R_in  : in  std_logic_vector(7 downto 0);
-        R_out : out std_logic_vector(7 downto 0);
+        val_in  : in  std_logic_vector(7 downto 0);
+        val_out : out std_logic_vector(7 downto 0);
         
         load  : in  std_logic;
 
@@ -105,6 +105,7 @@ architecture Behavioral of UC is
 
         load : in STD_LOGIC;
         enable : in STD_LOGIC;
+        init : in STD_LOGIC;
         
         PC_in  : in  STD_LOGIC_VECTOR (5 DOWNTO 0);
         PC_out : out STD_LOGIC_VECTOR (5 DOWNTO 0)
@@ -115,24 +116,24 @@ architecture Behavioral of UC is
     -- Internals signals declaration --
     -----------------------------------
 
-    signal PC_MUX  : std_logic_vector(5 downto 0) := (others=>'0');
-    signal dat_bus : std_logic_vector(7 downto 0) := (others=>'0');
+    signal int_PC_MUX  : std_logic_vector(5 downto 0) := (others=>'0');
+    signal int_dat_bus : std_logic_vector(7 downto 0) := (others=>'0');
     
-    signal Reg_load : std_logic;
-    signal PC_load  : std_logic;
-    signal PC_en    : std_logic;
-    signal PC_rst   : std_logic;
-    signal Mux_sel  : std_logic;
+    signal int_Reg_load : std_logic;
+    signal int_PC_load  : std_logic;
+    signal int_PC_en    : std_logic;
+    signal int_PC_rst   : std_logic;
+    signal int_Mux_sel  : std_logic;
 
-    signal Load_Accu  : std_logic;
-    signal Sig_ctrl   : std_logic;
-    signal Init_Carry : std_logic;
-    signal Load_Carry : std_logic;
-    signal Load_data  : std_logic;
-    signal Carry      : std_logic;
+    signal int_Load_Accu  : std_logic;
+    signal int_Sig_ctrl   : std_logic;
+    signal int_Init_Carry : std_logic;
+    signal int_Load_Carry : std_logic;
+    signal int_Load_data  : std_logic;
+    signal int_Carry      : std_logic;
 
-    signal RAM_RW     : std_logic;
-    signal RAM_EN     : std_logic;
+    signal int_RAM_RW     : std_logic;
+    signal int_RAM_EN     : std_logic;
 
 begin
 
@@ -146,35 +147,39 @@ begin
         ce  => ce,
         rst => rst,
 
-        OP <= dat_bus(8 downto 7),
+        OP => int_dat_bus(7 downto 6),
 
-        Load_Accu  <= Load_Accu,
-        Sig_ctrl   <= Sig_ctrl,
-        Init_Carry <= Init_Carry,
-        Load_Carry <= Load_Carry,
-        Load_data  <= Load_data,
+        Load_Accu  => int_Load_Accu,
+        Sig_ctrl   => int_Sig_ctrl,
+        Init_Carry => int_Init_Carry,
+        Load_Carry => int_Load_Carry,
+        Load_data  => int_Load_data,
 
-        Carry <= Carry,
+        Carry => int_Carry,
                 
-        Reg_load <= Reg_load,
-        Mux_sel  <= Reg_load,
-        PC_load  <= Reg_load,
-        PC_en    <= Reg_load,
-        PC_rst   <= Reg_load,
+        Reg_load => int_Reg_load,
+        Mux_sel  => int_Mux_sel,
+        
+        PC_load  => int_PC_load,
+        PC_en    => int_PC_en,
+        PC_rst   => int_PC_rst,
 
-        RAM_RW <= RAM_RW,
-        RAM_EN <= RAM_EN
+        RAM_RW => int_RAM_RW,
+        RAM_EN => int_RAM_EN
         
     );
 
-    PC: PC port map (
+    my_PC: PC port map (
         clk   => clk,
-        ce    => PC_en,
-        rst   => PC_rst,
-        load  => PC_load,
+        ce    => ce,
+        rst   => rst,
 
-        PC_in(5 downto 0)  => dat_bus(5 downto 0),
-        PC_out(5 downto 0) => PC_MUX
+        load  => int_PC_load,
+        enable  => int_PC_en,
+        init  => int_PC_rst,
+
+        PC_in(5 downto 0)  => int_dat_bus(5 downto 0),
+        PC_out(5 downto 0) => int_PC_MUX
         
     );
 
@@ -182,19 +187,20 @@ begin
         clk   => clk,
         ce    => ce,
         rst   => rst,
-        load  => Reg_load,
+        
+        load  => int_Reg_load,
 
-        R_in  => data_ram,
-        R_out => dat_bus
+        val_in  => data_ram,
+        val_out => int_dat_bus
 
     );
 
     mux: MUX_6 port map (
-        M_in_a => dat_bus(5 downto 0),
-        M_in_b => PC_MUX,
+        M_in_a => int_dat_bus(5 downto 0),
+        M_in_b => int_PC_MUX,
         M_out  => addr_ram,
 
-        sel    => Mux_sel
+        sel    => int_Mux_sel
     );
 
     ----------------------
@@ -218,6 +224,8 @@ begin
     
     -- M_addr <= mem_a;
     -- M_data <= mem_d;
+    RAM_EN <= int_RAM_EN;
+    RAM_RW <= int_RAM_RW;
 
 end Behavioral;
 
