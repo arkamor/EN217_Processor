@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC_tb

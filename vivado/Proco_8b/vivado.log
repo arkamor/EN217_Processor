@@ -1,0 +1,246 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Fri Feb 14 09:00:01 2020
+# Process ID: 3140
+# Log file: C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/vivado.log
+# Journal file: C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'.
+remove_files {C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+remove_files {C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+remove_files C:/Users/maucher/Desktop/EN217_Processor/src/processor_8b.vhd
+add_files -norecurse {C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_PC.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'PC_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj PC_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC
+ERROR: [VRFC 10-91] init is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:30]
+ERROR: [VRFC 10-91] cpt_out is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:42]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:19]
+INFO: [VRFC 10-240] VHDL file C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd ignored due to errors
+ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'PC_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj PC_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC
+ERROR: [VRFC 10-91] init is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:30]
+ERROR: [VRFC 10-91] cpt_out is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:42]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:19]
+INFO: [VRFC 10-240] VHDL file C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd ignored due to errors
+ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'PC_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj PC_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC
+ERROR: [VRFC 10-91] cpt_out is not declared [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:43]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd:20]
+INFO: [VRFC 10-240] VHDL file C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd ignored due to errors
+ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'PC_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj PC_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC_tb
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto f3dac7bf593048a6b71f7d48488ad2b3 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PC_tb_behav xil_defaultlib.PC_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PC [pc_default]
+Compiling architecture bench of entity xil_defaultlib.pc_tb
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot PC_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 827.523 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "PC_tb_behav -key {Behavioral:sim_1:Functional:PC_tb} -tclbatch {PC_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+source PC_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'PC_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 827.523 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'PC_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj PC_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC_tb
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto f3dac7bf593048a6b71f7d48488ad2b3 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PC_tb_behav xil_defaultlib.PC_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PC [pc_default]
+Compiling architecture bench of entity xil_defaultlib.pc_tb
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot PC_tb_behav
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "PC_tb_behav -key {Behavioral:sim_1:Functional:PC_tb} -tclbatch {PC_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+source PC_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'PC_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 827.523 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'PC_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj PC_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC_tb
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto f3dac7bf593048a6b71f7d48488ad2b3 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PC_tb_behav xil_defaultlib.PC_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PC [pc_default]
+Compiling architecture bench of entity xil_defaultlib.pc_tb
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot PC_tb_behav
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "PC_tb_behav -key {Behavioral:sim_1:Functional:PC_tb} -tclbatch {PC_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+source PC_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'PC_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 829.637 ; gain = 0.000
+save_wave_config {C:/Users/maucher/Desktop/EN217_Processor/test_bench/res/PC_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/maucher/Desktop/EN217_Processor/test_bench/res/PC_tb_behav.wcfg
+set_property xsim.view C:/Users/maucher/Desktop/EN217_Processor/test_bench/res/PC_tb_behav.wcfg [get_filesets sim_1]
+remove_files C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_PC.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+remove_files C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+add_files -norecurse {C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_alu.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+import_files
+remove_files -fileset sim_1 C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.srcs/sim_1/imports/res/PC_tb_behav.wcfg

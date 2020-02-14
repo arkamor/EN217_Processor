@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../../../src/UC/PC.vhd"
+vhdl xil_defaultlib  "../../../../../test_bench/tb_PC.vhd"
+
+# Do not sort compile order
+nosort

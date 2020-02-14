@@ -8,8 +8,9 @@ entity PC is
         clk  : in STD_LOGIC;
         rst  : in STD_LOGIC;
 
-        load : in STD_LOGIC;
+        load   : in STD_LOGIC;
         enable : in STD_LOGIC;
+        init   : in STD_LOGIC;
         
         PC_in  : in  STD_LOGIC_VECTOR (5 DOWNTO 0);
         PC_out : out STD_LOGIC_VECTOR (5 DOWNTO 0)
@@ -26,7 +27,7 @@ begin
         IF (rst = '1') THEN
             count <= "000000";
         ELSIF (clk'event AND clk = '1') THEN
-            IF (CE = '1') THEN
+            IF (ce = '1') THEN
                 IF (init = '1') THEN
                     count <= "000000";
                 ELSIF (load = '1') THEN
@@ -39,6 +40,6 @@ begin
         
     END process;
 
-cpt_out <= std_logic_vector(count);
+PC_out <= std_logic_vector(count);
 
 end Behavioral;

@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Fri Feb 14 09:00:01 2020
+# Process ID: 3140
+# Log file: C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/vivado.log
+# Journal file: C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.xpr
+remove_files {C:/Users/maucher/Desktop/EN217_Processor/src/UC/UC.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UT/UT.vhd C:/Users/maucher/Desktop/EN217_Processor/src/CPU_top_level.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+remove_files {C:/Users/maucher/Desktop/EN217_Processor/src/acces_carte.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UT/CARRY.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UC/MUX_6.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd C:/Users/maucher/Desktop/EN217_Processor/src/common/REG_8.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+remove_files C:/Users/maucher/Desktop/EN217_Processor/src/processor_8b.vhd
+add_files -norecurse {C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_PC.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source PC_tb.tcl
+close_sim
+launch_simulation
+source PC_tb.tcl
+close_sim
+launch_simulation
+source PC_tb.tcl
+save_wave_config {C:/Users/maucher/Desktop/EN217_Processor/test_bench/res/PC_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/maucher/Desktop/EN217_Processor/test_bench/res/PC_tb_behav.wcfg
+set_property xsim.view C:/Users/maucher/Desktop/EN217_Processor/test_bench/res/PC_tb_behav.wcfg [get_filesets sim_1]
+remove_files C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_PC.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+remove_files C:/Users/maucher/Desktop/EN217_Processor/src/UC/PC.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+add_files -norecurse {C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_alu.vhd C:/Users/maucher/Desktop/EN217_Processor/src/UT/ALU.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+import_files
+remove_files -fileset sim_1 C:/Users/maucher/Desktop/EN217_Processor/vivado/Proco_8b/Proco_8b.srcs/sim_1/imports/res/PC_tb_behav.wcfg
