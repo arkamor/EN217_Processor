@@ -13,7 +13,7 @@ architecture bench of ram_tb is
   		ce       : IN  STD_LOGIC;
   		rw       : IN  STD_LOGIC;
   		enable   : IN  STD_LOGIC;
-  		addr	 : IN  STD_LOGIC_VECTOR(6 DOWNTO 0);
+  		addr	 : IN  STD_LOGIC_VECTOR(5 DOWNTO 0);
   		data_in	 : IN  STD_LOGIC_VECTOR(7 DOWNTO 0);
   		data_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
   	);
@@ -23,7 +23,7 @@ architecture bench of ram_tb is
   signal ce: STD_LOGIC;
   signal rw: STD_LOGIC;
   signal enable: STD_LOGIC;
-  signal addr: STD_LOGIC_VECTOR(6 DOWNTO 0);
+  signal addr: STD_LOGIC_VECTOR(5 DOWNTO 0);
   signal data_in: STD_LOGIC_VECTOR(7 DOWNTO 0);
   signal data_out: STD_LOGIC_VECTOR(7 DOWNTO 0) ;
 
@@ -52,21 +52,33 @@ begin
     -- Put test bench stimulus code here
     ce <= '1';
     wait for clock_period;
+    
     rw <= '1';
-    addr <= STD_LOGIC_VECTOR(to_unsigned(31, 8));
+    
+    -- write 5 to addr 31
+    addr <= STD_LOGIC_VECTOR(to_unsigned(31, 6));
     data_in <= STD_LOGIC_VECTOR(to_unsigned(05, 8));
     wait for clock_period;
-    rw <= '1';
-    addr <= STD_LOGIC_VECTOR(to_unsigned(12, 8));
+    
+    -- write 8 to addr 12
+    addr <= STD_LOGIC_VECTOR(to_unsigned(12, 6));
     data_in <= STD_LOGIC_VECTOR(to_unsigned(08, 8));
     wait for clock_period;
+    
     rw <= '0';
     enable <= '1';
-    addr <= STD_LOGIC_VECTOR(to_unsigned(22, 8));
-    wait for clock_period;
-    addr <= STD_LOGIC_VECTOR(to_unsigned(31, 8));
-    wait for clock_period;
-    addr <= STD_LOGIC_VECTOR(to_unsigned(12, 8));
+    
+    -- read addr 22
+    addr <= STD_LOGIC_VECTOR(to_unsigned(22, 6));
+    wait for 3*clock_period;
+    
+    -- read addr 22
+    addr <= STD_LOGIC_VECTOR(to_unsigned(31, 6));
+    wait for 3*clock_period;
+    
+    -- read addr 22
+    wait for 3*clock_period;
+    addr <= STD_LOGIC_VECTOR(to_unsigned(12, 6));
 
     stop_the_clock <= true;
     wait;
@@ -75,7 +87,7 @@ begin
   clocking: process
   begin
     while not stop_the_clock loop
-      clk <= '0', '1' after clock_period / 2;
+      clk <= '1', '0' after clock_period / 2;
       wait for clock_period;
     end loop;
     wait;

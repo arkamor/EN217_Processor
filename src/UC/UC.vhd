@@ -25,7 +25,8 @@ Port (
     Init_Carry : out std_logic;
     
     -- RAM
-    RAM_com : out std_logic_vector(1 downto 0);
+    RAM_EN : out std_logic;
+    RAM_RW : out std_logic;
     
     addr_ram : out std_logic_vector(5 DOWNTO 0);
     data_ram : in  std_logic_vector(7 DOWNTO 0)

@@ -1,4 +1,4 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UC/FSM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSM
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_FSM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSM_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/src/UM/UM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ram
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maucher/Desktop/EN217_Processor/test_bench/tb_UM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ram_tb

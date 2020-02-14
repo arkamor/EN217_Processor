@@ -40,7 +40,7 @@ architecture Behavioral of CPU is
         -- UC
         Load_Accu  : in  std_logic;
         Sig_ctrl   : in  std_logic;
-        Carry      : out std_logic;
+        o_Carry    : out std_logic;
         Load_Carry : in  std_logic;
         Load_data  : in  std_logic;
         Init_Carry : in  std_logic;
@@ -48,6 +48,7 @@ architecture Behavioral of CPU is
         -- RAM
         out_ram : in  std_logic_vector(7 DOWNTO 0);
         in_ram  : out std_logic_vector(7 DOWNTO 0)
+
     );
     end component;
 
@@ -66,10 +67,11 @@ architecture Behavioral of CPU is
         Init_Carry : out std_logic;
         
         -- RAM
-        RAM_com : out std_logic_vector(1 downto 0);
+        RAM_EN : out std_logic;
+        RAM_RW : out std_logic;
         
-        addr_ram : in  std_logic_vector(5 DOWNTO 0);
-        data_ram : out std_logic_vector(7 DOWNTO 0)
+        addr_ram : out std_logic_vector(5 DOWNTO 0);
+        data_ram : in  std_logic_vector(7 DOWNTO 0)
     );
     end component;
 
@@ -91,8 +93,9 @@ architecture Behavioral of CPU is
     -- Internals signals declaration --
     -----------------------------------
 
-    SIGNAL mem_a : std_logic_vector(5 downto 0) := (others=>'0'); 
-    SIGNAL mem_d : std_logic_vector(7 downto 0) := (others=>'0');
+    SIGNAL mem_a   : std_logic_vector(5 downto 0) := (others=>'0'); 
+    SIGNAL mem_d_0 : std_logic_vector(7 downto 0) := (others=>'0');
+    SIGNAL mem_d_1 : std_logic_vector(7 downto 0) := (others=>'0');
 
     -- UC/UT --
     
@@ -106,14 +109,15 @@ architecture Behavioral of CPU is
     -- RAM
 
     ---- UC ----    
-    -- RAM
-    RAM_com : out std_logic_vector(1 downto 0);
+    -- RAM --
     
-
+    SIGNAL RAM_EN : std_logic;
+    SIGNAL RAM_RW : std_logic;
+    
     ---- UM ----
-    rw       : IN  STD_LOGIC;
-    enable   : IN  STD_LOGIC;
-
+    
+    SIGNAL rw : std_logic;
+    SIGNAL enable : std_logic;
 
 begin
 
@@ -123,40 +127,72 @@ begin
 
     my_UC: UC port map (
         clk      => clk,
-        rst      => rst
+        rst      => rst,
+        ce       => ce,
+
+        Load_Accu    => Load_Accu,
+        Sig_ctrl     => Sig_ctrl,
+        Carry     => Carry,
+        Load_Carry     => Load_Carry,
+        Load_data     => Load_data,
+        Init_Carry     => Init_Carry,
+
+        RAM_EN     => RAM_EN,
+        RAM_RW     => RAM_RW,
+
+        addr_ram     => addr_ram,
+        data_ram     => data_ram
     );
 
     my_UT: UC port map (
         clk      => clk,
-        rst      => rst
+        rst      => rst,
+        ce       => ce,
+        
+        Load_Accu    => Load_Accu,
+        Sig_ctrl     => Sig_ctrl,
+        Carry     => Carry,
+        Load_Carry     => Load_Carry,
+        Load_data     => Load_data,
+        Init_Carry     => Init_Carry,
+        
+        out_ram     => out_ram,
+        in_ram     => in_ram
     );
 
     my_UM: UC port map (
         clk      => clk,
-        rst      => rst
+        ce       => ce,
+        
+        rw       => rw,
+        enable   => enable,
+        
+        addr   => addr,
+        data_in   => data_in,
+        data_out   => data_out
     );
 
     ----------------------
     -- Synchronous code --
     ----------------------
 
-    process (clk, rst) is
-    begin --process
-        if (clk'event and clk='1') then
-            if rst ='1' then
-                mem_a  <= (others=>'0');
-            end if;
+    -- process (clk, rst) is
+    -- begin --process
+    --     if (clk'event and clk='1') then
+    --         if rst ='1' then
+    --             mem_a  <= (others=>'0');
+    --         end if;
 
 
-        end if;
-    end process
+    --     end if;
+    -- end process
 
-    -----------------------
-    -- Asynchronous code --
-    -----------------------
+    -- -----------------------
+    -- -- Asynchronous code --
+    -- -----------------------
     
-    M_addr <= mem_a;
-    M_data <= mem_d;n  
+    -- M_addr <= mem_a;
+    -- M_data <= mem_d; 
 
 end Behavioral;
 
