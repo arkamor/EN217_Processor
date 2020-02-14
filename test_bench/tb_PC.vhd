@@ -44,8 +44,8 @@ begin
   begin
   
     -- Put initialisation code here
-      load <= '0';
-      rst<='0';
+    load <= '0';
+    rst<='0';
 
     -- Put test bench stimulus code here
     rst<='1';

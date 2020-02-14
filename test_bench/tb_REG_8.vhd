@@ -41,7 +41,23 @@ begin
   begin
   
     -- Put initialisation code here
-
+    rst<='1';
+    wait for clock_period;
+    rst<='0';
+    ce<='0';
+    wait for clock_period;
+    ce<='1';
+    wait for clock_period;
+    load<='1';
+    val_in<="10101010";
+    wait for clock_period;
+    val_in<="11111111";
+    wait for clock_period;
+    val_in<="00110101";
+    wait for clock_period;
+    val_in<="01011100";
+    wait for clock_period;
+    val_in<="00000001";
 
     -- Put test bench stimulus code here
 
