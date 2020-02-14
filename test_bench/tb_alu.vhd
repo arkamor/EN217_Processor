@@ -36,19 +36,19 @@ begin
     Sig_ctrl<='0';
     Reg_data<="10101010";
     Reg_accu<="01010101";
-    wait for clock_period;
+    wait for 10ns;
     Sig_ctrl<='1';
     Reg_data<="00100111";
     Reg_accu<="00100111";
-    wait for clock_period;
+    wait for 10ns;
     Sig_ctrl<='0';
     Reg_data<="01001100";
     Reg_accu<="00100111";
-    wait for clock_period;
+    wait for 10ns;
     Sig_ctrl<='1';
     Reg_data<="10101010";
-    Reg_accu<="01010101";
-    wait for clock_period;
+    Reg_accu<="11010101";
+    wait for 10ns;
 
     -- Put test bench stimulus code here
 

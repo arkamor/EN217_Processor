@@ -27,8 +27,8 @@ Port (
     -- RAM
     RAM_com : out std_logic_vector(1 downto 0);
     
-    addr_ram : in  std_logic_vector(5 DOWNTO 0);
-    data_ram : out std_logic_vector(7 DOWNTO 0)
+    addr_ram : out std_logic_vector(5 DOWNTO 0);
+    data_ram : in  std_logic_vector(7 DOWNTO 0)
         
 );
             

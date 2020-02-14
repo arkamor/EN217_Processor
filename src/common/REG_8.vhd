@@ -17,7 +17,7 @@ end REG_8;
 
 architecture Behavioral of REG_8 is
 
-signal reg : std_logic_vector(8 downto 0) := "00000000";
+signal reg : std_logic_vector(7 downto 0) := "00000000";
 
 begin
 

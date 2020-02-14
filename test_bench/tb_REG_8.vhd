@@ -47,6 +47,10 @@ begin
     ce<='0';
     wait for clock_period;
     ce<='1';
+
+    -- Put test bench stimulus code here
+    
+    
     wait for clock_period;
     load<='1';
     val_in<="10101010";
@@ -58,8 +62,6 @@ begin
     val_in<="01011100";
     wait for clock_period;
     val_in<="00000001";
-
-    -- Put test bench stimulus code here
 
     stop_the_clock <= true;
     wait;
