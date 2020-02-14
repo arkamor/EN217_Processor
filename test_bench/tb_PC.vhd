@@ -44,23 +44,30 @@ begin
   begin
   
     -- Put initialisation code here
-    load <= '0';
-    rst<='0';
+    ce     <= '0';
+    rst    <= '1';
+    load   <= '0';
+    enable <= '0';
+    
+    PC_in <= std_logic_vector(to_unsigned(0,6));
+
+    wait for clock_period;
+    
+    rst <= '0';
+    wait for clock_period;
 
     -- Put test bench stimulus code here
-    rst<='1';
-    wait for clock_period;
-    rst<='0';
+
     wait for clock_period;
     enable <= '1';
-    wait for clock_period;
+    wait for 15*clock_period;
     enable <= '0';
-    PC_in <= "101010";
+    PC_in <= std_logic_vector(to_unsigned(42,6));
     load <= '1';
     wait for clock_period;
     load <= '0';
     enable <= '1';
-
+    wait for 15*clock_period;
     stop_the_clock <= true;
     wait;
   end process;
